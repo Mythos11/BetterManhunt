@@ -1,0 +1,32 @@
+name: Manhunt
+version: '${version}'
+main: me.mythos.manhunt.Main
+api-version: 1.18
+authors: [ Mythos ]
+description: BetterManhunt
+website: https://github.com/mythos11
+
+commands:
+  hunted:
+    aliases: hunt
+    usage: /hunted <Target>
+    description: Sets the player as hunted
+  unhunt:
+    aliases: removehunt
+    usage: /hunted <Target>
+    description: Stops the player from being hunted
+  clearhunted:
+    aliases:
+      - clrhunted
+      - clrhunt
+      - clshunted
+      - clshunt
+    usage: /clearhunted <Target>
+    description: Stops all players that are currently hunted from being huntedf
+  listhunted:
+    aliases:
+      - lsh
+      - lshunted
+      - lshunt
+    usage: /listhunted
+    description: Lists all hunted players
