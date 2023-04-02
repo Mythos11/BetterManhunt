@@ -23,6 +23,11 @@ public class RemoveHuntedCommand implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String label, @NotNull String[] args)
     {
         Player target = Bukkit.getPlayerExact(args[0]);
+        
+        if (target == null){
+            sender.sendMessage(ChatColor.RED + args[0] + " is not a valid player");
+            return false;
+        }
 
         sender.sendMessage(ChatColor.AQUA + args[0] + ChatColor.GREEN + " is no longer hunted");
 
